@@ -8,7 +8,7 @@ void main() {
       final result = NeumorphicColors.decorationWhiteColor(baseColor, intensity: 0.5);
       
       expect(result, isA<Color>());
-      expect(result.alpha, lessThanOrEqualTo(baseColor.alpha));
+      expect(result.a, lessThanOrEqualTo(baseColor.a));
     });
 
     test('decorationDarkColor creates valid colors', () {
@@ -16,7 +16,7 @@ void main() {
       final result = NeumorphicColors.decorationDarkColor(baseColor, intensity: 0.5);
       
       expect(result, isA<Color>());
-      expect(result.alpha, lessThanOrEqualTo(baseColor.alpha));
+      expect(result.a, lessThanOrEqualTo(baseColor.a));
     });
 
     test('embossWhiteColor creates valid colors', () {
@@ -24,7 +24,7 @@ void main() {
       final result = NeumorphicColors.embossWhiteColor(baseColor, intensity: 0.5);
       
       expect(result, isA<Color>());
-      expect(result.alpha, lessThanOrEqualTo(baseColor.alpha));
+      expect(result.a, lessThanOrEqualTo(baseColor.a));
     });
 
     test('embossDarkColor creates valid colors', () {
@@ -32,21 +32,21 @@ void main() {
       final result = NeumorphicColors.embossDarkColor(baseColor, intensity: 0.5);
       
       expect(result, isA<Color>());
-      expect(result.alpha, lessThanOrEqualTo(baseColor.alpha));
+      expect(result.a, lessThanOrEqualTo(baseColor.a));
     });
 
     test('gradientShaderWhiteColor creates valid colors', () {
       final result = NeumorphicColors.gradientShaderWhiteColor(intensity: 0.5);
       
       expect(result, isA<Color>());
-      expect(result.alpha, lessThanOrEqualTo(255));
+      expect(result.a, lessThanOrEqualTo(1.0));
     });
 
     test('gradientShaderDarkColor creates valid colors', () {
       final result = NeumorphicColors.gradientShaderDarkColor(intensity: 0.5);
       
       expect(result, isA<Color>());
-      expect(result.alpha, lessThanOrEqualTo(255));
+      expect(result.a, lessThanOrEqualTo(1.0));
     });
 
     test('color constants exist and are valid', () {
@@ -66,7 +66,7 @@ void main() {
       final lowIntensity = NeumorphicColors.decorationWhiteColor(baseColor, intensity: 0.1);
       final highIntensity = NeumorphicColors.decorationWhiteColor(baseColor, intensity: 0.9);
       
-      expect(lowIntensity.alpha, lessThan(highIntensity.alpha));
+      expect(lowIntensity.a, lessThan(highIntensity.a));
     });
 
     test('handles edge intensity values', () {
@@ -75,8 +75,8 @@ void main() {
       final minIntensity = NeumorphicColors.decorationWhiteColor(baseColor, intensity: 0.0);
       final maxIntensity = NeumorphicColors.decorationWhiteColor(baseColor, intensity: 1.0);
       
-      expect(minIntensity.alpha, equals(0));
-      expect(maxIntensity.alpha, greaterThan(0));
+      expect(minIntensity.a, equals(0.0));
+      expect(maxIntensity.a, greaterThan(0.0));
     });
   });
 
