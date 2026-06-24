@@ -146,8 +146,6 @@ class NeumorphicRangeSlider extends StatefulWidget {
 }
 
 class _NeumorphicRangeSliderState extends State<NeumorphicRangeSlider> {
-  late ActiveThumb _activeThumb;
-  late bool _canChangeActiveThumb;
 
   @override
   Widget build(BuildContext context) {

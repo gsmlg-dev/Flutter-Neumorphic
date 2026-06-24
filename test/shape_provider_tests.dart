@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 import 'package:flutter_neumorphic_plus/src/shape/circle_path_provider.dart';
 import 'package:flutter_neumorphic_plus/src/shape/rect_path_provider.dart';

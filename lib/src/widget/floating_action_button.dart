@@ -22,8 +22,8 @@ class NeumorphicFloatingActionButton extends StatelessWidget {
     this.mini = false,
     this.style,
     this.tooltip,
-    @required this.child,
-    @required this.onPressed,
+    required this.child,
+    required this.onPressed,
   }) : super(key: key);
 
   @override

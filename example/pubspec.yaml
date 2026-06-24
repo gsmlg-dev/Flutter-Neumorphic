@@ -25,6 +25,7 @@ dependencies:
     path: ../
 
   flutter_colorpicker: ^1.0.0
+  go_router: ^17.3.0
 
 dev_dependencies:
   flutter_test:
